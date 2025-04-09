@@ -1,96 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neko Methods 🔗</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
+<!-- Página 2 (tutorial) -->
+<div class="container" id="pagina2" style="display:none;">
+  <h1>Tutorial</h1>
 
-    .page {
-      display: none;
-      padding: 20px;
-    }
+  <h2><strong>1° PASSO</strong></h2>
+  <p>Descrição do primeiro passo aqui...</p>
 
-    .active {
-      display: block;
-    }
+  <h2><strong>2° PASSO</strong></h2>
+  <p>Descrição do segundo passo aqui...</p>
 
-    .link-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #5865F2;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      margin: 5px;
-    }
+  <h2><strong>3° PASSO</strong></h2>
+  <p>Descrição do terceiro passo aqui...</p>
 
-    h2 {
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <!-- Página 1: Linktree -->
-  <div id="pagina1" class="page active">
-    <div class="container">
-      <img src="https://cdn.discordapp.com/avatars/1275575010366587003/6ac2b3a02964d14262274b529a71db85.png?size=2048" alt="Foto de Perfil" class="profile-pic" />
-      <h1>Neko Methods</h1>
-      <div class="buttons">
-        <a href="#" onclick="mudarPagina(2)" class="link-button">Tutorial</a>
-        <a href="https://github.com/Kaaminari/bypass/issues/1" class="link-button" target="_blank">Bypass</a>
-        <a href="https://www.tiktok.com/@neko.10101" class="link-button" target="_blank">TikTok</a>
-      </div>
-    </div>
-  </div>
+  <h2><strong>4° PASSO</strong></h2>
+  <p>Descrição do quarto passo aqui...</p>
 
-  <!-- Página 2: Tutorial -->
-  <div id="pagina2" class="page">
-    <h2>1° PASSO</h2>
-    <p># Aqui vai a descrição do primeiro passo</p>
+  <h2><strong>5° PASSO</strong></h2>
+  <p>Descrição do quinto passo aqui...</p>
 
-    <h2>2° PASSO</h2>
-    <p># Aqui vai a descrição do segundo passo</p>
+  <h2><strong>6° PASSO</strong></h2>
+  <p>Descrição do sexto passo aqui...</p>
 
-    <h2>3° PASSO</h2>
-    <p># Aqui vai a descrição do terceiro passo</p>
+  <!-- # Aqui você pode colar as 3 imagens -->
+  <img src="caminho/para/sua-imagem1.png" alt="Imagem 1">
+  <img src="caminho/para/sua-imagem2.png" alt="Imagem 2">
+  <img src="caminho/para/sua-imagem3.png" alt="Imagem 3">
 
-    <h2>4° PASSO</h2>
-    <p># Aqui vai a descrição do quarto passo</p>
+  <h2><strong>IMPORTANTE</strong></h2>
+  <p>Texto importante da versão V2 aqui...</p>
 
-    <h2>5° PASSO</h2>
-    <p># Aqui vai a descrição do quinto passo</p>
+  <h2><strong>Primeiro passo e último</strong></h2>
+  <p>Descrição final aqui...</p>
 
-    <h2>6° PASSO</h2>
-    <p># Aqui vai a descrição do sexto passo</p>
-    
-    <!-- DICA: Colar imagens aqui -->
-    <img src="public/imagens/passo6-1.png" alt="Passo 6 Imagem 1" />
-    <img src="public/imagens/passo6-2.png" alt="Passo 6 Imagem 2" />
-    <img src="public/imagens/passo6-3.png" alt="Passo 6 Imagem 3" />
-
-    <h2>IMPORTANTE</h2>
-    <p># Aqui vai a descrição da V2</p>
-
-    <h2>Primeiro passo e último</h2>
-    <p># Descrição desse trecho</p>
-
-    <br>
-    <a href="#" onclick="mudarPagina(1)" class="link-button">Voltar</a>
-  </div>
-
-  <script>
-    function mudarPagina(num) {
-      document.getElementById("pagina1").classList.remove("active");
-      document.getElementById("pagina2").classList.remove("active");
-      document.getElementById("pagina" + num).classList.add("active");
-    }
-  </script>
-</body>
-</html>
+  <br>
+  <button class="link-button" onclick="voltar()">← Voltar</button>
+</div>
