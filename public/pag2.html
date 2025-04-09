@@ -1,120 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neko Bypass 🔗</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #5865F2;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+  </style>
+</head>
 <body>
-  <canvas id="snow"></canvas>
-
-  <!-- Página inicial -->
-  <div class="container" id="home">
-    <img src="https://cdn.discordapp.com/avatars/1275575010366587003/6ac2b3a02964d14262274b529a71db85.png?size=2048" alt="Foto de Perfil" class="profile-pic" />
-    <h1>Neko</h1>
-    <div class="buttons">
-      <button class="link-button" onclick="showTutorial()">Tutorial</button>
-      <a href="https://github.com/Kaaminari/bypass" class="link-button" target="_blank">Bypass</a>
-      <a href="https://www.tiktok.com/@neko.10101" class="link-button" target="_blank">TikTok</a>
+  <!-- Página 1: Linktree -->
+  <div id="pagina1" class="page active">
+    <div class="container">
+      <img src="https://cdn.discordapp.com/avatars/1275575010366587003/6ac2b3a02964d14262274b529a71db85.png?size=2048" alt="Foto de Perfil" class="profile-pic" />
+      <h1>Neko Bypass</h1>
+      <div class="buttons">
+        <a href="#" onclick="mudarPagina(2)" class="link-button">Tutorial</a>
+        <a href="https://github.com/Kaaminari/bypass/issues/1" class="link-button" target="_blank">Bypass</a>
+        <a href="https://www.tiktok.com/@neko.10101" class="link-button" target="_blank">TikTok</a>
+      </div>
     </div>
   </div>
 
-  <!-- Página do tutorial -->
-  <div class="tutorial-page" id="tutorial" style="display: none;">
-    <h2><strong>1° PASSO</strong></h2>
-    <p># Coloque aqui a descrição do primeiro passo.</p>
+  <!-- Página 2: Tutorial -->
+  <div id="pagina2" class="page">
+    <h2>1° PASSO</h2>
+    <p># Aqui vai a descrição do primeiro passo</p>
 
-    <h2><strong>2° PASSO</strong></h2>
-    <p># Descrição do segundo passo.</p>
+    <h2>2° PASSO</h2>
+    <p># Aqui vai a descrição do segundo passo</p>
 
-    <h2><strong>3° PASSO</strong></h2>
-    <p># Descrição do terceiro passo.</p>
+    <h2>3° PASSO</h2>
+    <p># Aqui vai a descrição do terceiro passo</p>
 
-    <h2><strong>4° PASSO</strong></h2>
-    <p># Descrição do quarto passo.</p>
+    <h2>4° PASSO</h2>
+    <p># Aqui vai a descrição do quarto passo</p>
 
-    <h2><strong>5° PASSO</strong></h2>
-    <p># Descrição do quinto passo.</p>
+    <h2>5° PASSO</h2>
+    <p># Aqui vai a descrição do quinto passo</p>
 
-    <h2><strong>6° PASSO</strong></h2>
-    <p># Descrição do sexto passo.</p>
-    <!-- # Cole aqui suas três imagens -->
-    <div class="step-images">
-      <img src="#" alt="Imagem 1" />
-      <img src="#" alt="Imagem 2" />
-      <img src="#" alt="Imagem 3" />
-    </div>
+    <h2>6° PASSO</h2>
+    <p># Aqui vai a descrição do sexto passo</p>
+    
+    <!-- DICA: Colar imagens aqui -->
+    <img src="public/imagens/passo6-1.png" alt="Passo 6 Imagem 1" />
+    <img src="public/imagens/passo6-2.png" alt="Passo 6 Imagem 2" />
+    <img src="public/imagens/passo6-3.png" alt="Passo 6 Imagem 3" />
 
-    <h2><strong>IMPORTANTE</strong></h2>
-    <p># Coloque aqui a versão V2 ou informações importantes.</p>
+    <h2>IMPORTANTE</h2>
+    <p># Aqui vai a descrição da V2</p>
 
-    <h2><strong>PRIMEIRO PASSO E ÚLTIMO</strong></h2>
-    <p># Descrição dessa versão final do processo.</p>
+    <h2>Primeiro passo e último</h2>
+    <p># Descrição desse trecho</p>
 
-    <button class="back-button" onclick="showHome()">Voltar</button>
+    <br>
+    <a href="#" onclick="mudarPagina(1)" class="link-button">Voltar</a>
   </div>
 
-  <!-- Script neve (igual ao anterior) -->
   <script>
-    const canvas = document.getElementById("snow");
-    const ctx = canvas.getContext("2d");
-
-    let width, height;
-    let snowflakes = [];
-
-    function resize() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    }
-
-    function createSnowflakes() {
-      const x = Math.random() * width;
-      const y = Math.random() * height;
-      const radius = Math.random() * 4 + 1;
-      const speed = Math.random() * 1 + 0.5;
-      snowflakes.push({ x, y, radius, speed });
-    }
-
-    function drawSnowflakes() {
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "#FFF";
-      ctx.beginPath();
-      for (let flake of snowflakes) {
-        ctx.moveTo(flake.x, flake.y);
-        ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-      }
-      ctx.fill();
-      moveSnowflakes();
-    }
-
-    function moveSnowflakes() {
-      for (let flake of snowflakes) {
-        flake.y += flake.speed;
-        if (flake.y > height) {
-          flake.y = 0;
-          flake.x = Math.random() * width;
-        }
-      }
-    }
-
-    function update() {
-      drawSnowflakes();
-      requestAnimationFrame(update);
-    }
-
-    window.addEventListener("resize", resize);
-
-    resize();
-    for (let i = 0; i < 150; i++) {
-      createSnowflakes();
-    }
-
-    update();
-  </script>
-
-  <!-- Script para alternar páginas -->
-  <script>
-    function showTutorial() {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("tutorial").style.display = "block";
-    }
-
-    function showHome() {
-      document.getElementById("tutorial").style.display = "none";
-      document.getElementById("home").style.display = "block";
+    function mudarPagina(num) {
+      document.getElementById("pagina1").classList.remove("active");
+      document.getElementById("pagina2").classList.remove("active");
+      document.getElementById("pagina" + num).classList.add("active");
     }
   </script>
 </body>
+</html>
