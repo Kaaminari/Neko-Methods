@@ -82,7 +82,7 @@
       ctx.fill();
       moveSnowflakes();
     }
-
+    
     function moveSnowflakes() {
       for (let flake of snowflakes) {
         flake.y += flake.speed;
@@ -92,7 +92,18 @@
         }
       }
     }
+    
+  function mostrarPagina2() {
+    document.getElementById('home-page').style.display = 'none';
+    document.getElementById('pagina2').style.display = 'block';
+  }
 
+  function voltar() {
+    document.getElementById('pagina2').style.display = 'none';
+    document.getElementById('home-page').style.display = 'block';
+  }
+
+    
     function update() {
       drawSnowflakes();
       requestAnimationFrame(update);
