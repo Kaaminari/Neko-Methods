@@ -16,15 +16,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Methods Linktree</title>
+  <title>Meu Linktree</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    canvas#snow {
+    /* Garante que o canvas fique atrás de tudo */
+    #snow {
       position: fixed;
       top: 0;
       left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
-      z-index: 9999;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
