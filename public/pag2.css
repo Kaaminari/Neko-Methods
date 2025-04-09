@@ -1,0 +1,48 @@
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container, .tutorial-page {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.tutorial-page {
+  max-width: 800px;
+  margin: auto;
+}
+
+.step-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.step-images img {
+  width: 30%;
+  max-width: 200px;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
