@@ -49,7 +49,7 @@ h2 .emoji-gif {
   margin-top: 20px;
   padding: 10px 20px;
   font-weight: bold;
-  background-color: #5865F2; /* azul do Discord */
+  background-color: #2b2d31; /* azul do Discord */
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -60,7 +60,7 @@ h2 .emoji-gif {
 }
 
 .back-button:hover {
-  background-color: #4752C4;
+  background-color: #1e1f22;
   transform: scale(1.03); /* leve zoom ao passar o mouse */
 }
 
