@@ -28,7 +28,7 @@ body {
   margin: auto;
 }
 
-.step-images img {
+.step-images {
   width: 30%;
   max-width: 200px;
   border-radius: 10px;
