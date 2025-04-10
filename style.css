@@ -9,6 +9,7 @@ body {
 .container {
   max-width: 400px;
   margin: 50px auto;
+  overflow: visible;
   text-align: center;
 }
 
