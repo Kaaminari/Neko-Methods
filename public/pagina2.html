@@ -10,7 +10,7 @@
     <h1>Metódo Roubar por trade de conta</h1>
 
     <h2><strong>IMPORTANTE</strong></h2>
-    <p>> A Conta que você! for passar por trade precisa ser -13 de idade, caso contrário não vai conseguir recuperar<br>
+    <p>> :cat: A Conta que você! for passar por trade precisa ser -13 de idade, caso contrário não vai conseguir recuperar<br>
        > Tenha um email verificado, e com verificação de 2 fatores ativo<br>
        > Se possível coloque códigos de recuperação</p>
     
@@ -46,11 +46,29 @@
     <br>
     <button class="link-button" onclick="voltar()">← Voltar</button>
   </div>
-
-  <script>
+    <script>
     function voltar() {
       window.history.back();
     }
+    const emojiMap = {
+    ":cat:": "https://imgur.com/a/qOK9VQd",
+    ":dog:": "https://media.tenor.com/I6kN-6X7nhAAAAAC/dog-hello.gif",
+    ":fire:": "https://media.tenor.com/8RIFAKtF7T0AAAAC/fire-flames.gif"
+    // adiciona mais aqui!
+  };
+
+  function substituirEmojis(texto) {
+    for (const emoji in emojiMap) {
+      const imgTag = `<img src="${emojiMap[emoji]}" class="emoji-gif" alt="${emoji}">`;
+      texto = texto.replaceAll(emoji, imgTag);
+    }
+    return texto;
+  }
+
+  // Substitui os emojis nos <p> e <h2>, <h1>, etc
+  document.querySelectorAll("p, h1, h2, h3, span").forEach(el => {
+    el.innerHTML = substituirEmojis(el.innerHTML);
+  });
   </script>
 </body>
 </html>
