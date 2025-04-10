@@ -70,6 +70,11 @@
     }
     return texto;
   }
+
+      // Substitui os emojis nos <p> e <h2>, <h1>, etc
+  document.querySelectorAll("p, h1, h2, h3, span").forEach(el => {
+    el.innerHTML = substituirEmojis(el.innerHTML);
+  });
     
     const canvas = document.getElementById("snow");
     const ctx = canvas.getContext("2d");
