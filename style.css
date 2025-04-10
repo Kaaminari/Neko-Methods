@@ -30,6 +30,7 @@ h1 {
 }
 
 h1 .emoji-gif,
+a .emoji-gif,
 h2 .emoji-gif {
   height: 1.5em; /* ou maior se quiser */
 }
