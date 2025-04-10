@@ -48,12 +48,22 @@ h2 .emoji-gif {
 }
 
 @media (max-width: 600px) {
+  .tutorial-page {
+    padding: 10px;
+  }
+
+  .step-images {
+    width: 90%;
+    max-width: none;
+  }
+
   .back-button {
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 12px;
   }
 }
+
 
 @media (max-width: 600px) {
   body {
