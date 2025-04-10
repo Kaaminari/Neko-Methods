@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Open Graph (Discord, Facebook etc.) -->
+  <meta property="og:title" content="Neko Methods 🔗" />
+  <meta property="og:description" content="A official Neko Methods" />
+  <meta property="og:image" content="https://imgur.com/ulXZKJB" />
+  <meta property="og:url" content="https://kaaminari.github.io/nekolinktree/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Neko Methods 🔗" />
+  <meta name="twitter:description" content="A official Neko Methods" />
+  <meta name="twitter:image" content="https://imgur.com/ulXZKJB" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neko Methods 🔗</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Garante que o canvas fique atrás de tudo */
+    #snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CANVAS DA NEVE -->
+  <canvas id="snow"></canvas>
+
+  <!-- Página principal -->
+  <div class="container" id="home-page">
+    <img src="https://cdn.discordapp.com/avatars/1275575010366587003/6ac2b3a02964d14262274b529a71db85.png?size=2048" alt="Foto de Perfil" class="profile-pic" />
+    <h1>Neko Methods 🔗</h1>
+    <div class="buttons">
+      <a href="public/pagina2.html" class="link-button" target="_blank">Trade por conta</a>
+      <a href="#" class="link-button" target="_blank">EM BREVE</a>
+      <a href="#" class="link-button" target="_blank">EM BREVE</a>
+    </div>
+  </div>
+
+  <!-- SCRIPT DA NEVE + funções -->
+  <script>
+    const canvas = document.getElementById("snow");
+    const ctx = canvas.getContext("2d");
+
+    let width, height;
+    let snowflakes = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    function createSnowflakes() {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+      const radius = Math.random() * 4 + 1;
+      const speed = Math.random() * 1 + 0.5;
+      snowflakes.push({ x, y, radius, speed });
+    }
+
+    function drawSnowflakes() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "#FFF";
+      ctx.beginPath();
+      for (let flake of snowflakes) {
+        ctx.moveTo(flake.x, flake.y);
+        ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+      }
+      ctx.fill();
+      moveSnowflakes();
+    }
+
+    function moveSnowflakes() {
+      for (let flake of snowflakes) {
+        flake.y += flake.speed;
+        if (flake.y > height) {
+          flake.y = 0;
+          flake.x = Math.random() * width;
+        }
+      }
+    }
+
+    function update() {
+      drawSnowflakes();
+      requestAnimationFrame(update);
+    }
+
+    function mostrarPagina2() {
+      document.getElementById('home-page').style.display = 'none';
+      document.getElementById('pagina2').style.display = 'block';
+    }
+
+    function voltar() {
+      document.getElementById('pagina2').style.display = 'none';
+      document.getElementById('home-page').style.display = 'block';
+    }
+
+    window.addEventListener("resize", resize);
+
+    resize();
+    for (let i = 0; i < 150; i++) {
+      createSnowflakes();
+    }
+
+    update();
+  </script>
+</body>
+</html>
