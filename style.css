@@ -24,6 +24,16 @@ h1 {
   margin-bottom: 30px;
 }
 
+.emoji-gif {
+  height: 1em;
+  vertical-align: middle;
+}
+
+h1 .emoji-gif,
+h2 .emoji-gif {
+  height: 1.5em; /* ou maior se quiser */
+}
+
 .buttons .btn {
   display: block;
   background-color: #222;
