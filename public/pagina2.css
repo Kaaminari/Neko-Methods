@@ -23,6 +23,13 @@ body {
   color: white;
 }
 
+.emoji-gif {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
 .embed {
   background-color: #2f3136;
   border-left: 4px solid #5865F2;
