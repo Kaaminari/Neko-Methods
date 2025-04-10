@@ -45,7 +45,7 @@
     <img src="https://cdn.discordapp.com/avatars/1275575010366587003/6ac2b3a02964d14262274b529a71db85.png?size=2048" alt="Foto de Perfil" class="profile-pic" />
     <h1>Neko Methods 🔗</h1>
     <div class="buttons">
-      <a href="public/pagina2.html" class="link-button">Trade por conta</a>
+      <a href="public/pagina2.html" class="link-button">:anotei: Trade por conta</a>
       <a href="#" class="link-button">EM BREVE</a>
       <a href="#" class="link-button">EM BREVE</a>
     </div>
@@ -53,6 +53,24 @@
 
   <!-- SCRIPT DA NEVE + funções -->
   <script>
+
+    const emojiMap = {
+    ":anotei:": "https://imgur.com/rMUeTdP.png",
+    ":!:": "https://imgur.com/4iIciIk.gif",
+    ":nspin:": "https://imgur.com/TMBdmzg.gif",
+    ":diamond:": "https://imgur.com/qe1gwCq.gif",
+    ":gun:": "https://imgur.com/RN5P3Pa.gif"
+    // adiciona mais aqui!
+  };
+
+  function substituirEmojis(texto) {
+    for (const emoji in emojiMap) {
+      const imgTag = `<img src="${emojiMap[emoji]}" class="emoji-gif" alt="${emoji}">`;
+      texto = texto.replaceAll(emoji, imgTag);
+    }
+    return texto;
+  }
+    
     const canvas = document.getElementById("snow");
     const ctx = canvas.getContext("2d");
 
