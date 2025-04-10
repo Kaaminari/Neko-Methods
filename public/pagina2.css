@@ -19,6 +19,7 @@ body {
   z-index: 1;
   text-align: center;
   padding: 20px;
+  overflow: visible;
   color: white;
 }
 
