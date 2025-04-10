@@ -23,6 +23,12 @@ body {
   color: white;
 }
 
+.emoji-titulo {
+  height: 1.5em; /* ou 2em se quiser maior ainda */
+  width: auto;
+  vertical-align: middle;
+}
+
 .emoji-gif {
   height: 1em;
   vertical-align: middle;
