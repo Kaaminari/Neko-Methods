@@ -23,6 +23,16 @@ body {
   color: white;
 }
 
+.embed {
+  background-color: #2f3136;
+  border-left: 4px solid #5865F2;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  margin: 10px 0;
+  text-align: left;
+}
+
 .gifzinho {
   width: 100px;
   border-radius: 10px;
