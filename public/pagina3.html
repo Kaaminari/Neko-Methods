@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="pagina2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>:gun: Metódo Roubar por trade de conta</h1>
+
+    <h2><strong>:sirene: IMPORTANTE</strong></h2>
+    <p>:!: A Conta que você! for passar por trade precisa ser -13 de idade, caso contrário não vai conseguir recuperar<br>
+       :!: Tenha um email verificado, e com verificação de 2 fatores ativo<br>
+       :!: Não demore muito se não a vitima vai ativar a autenticação ai você perde sua conta<br>
+       :!: Se possível coloque códigos de recuperação</p>
+    
+    <h2><strong>:nspin: 1° PASSO</strong></h2>
+    <p>Sempre desconfie esse tipo de trade tem diversos Scam<br>
+       Fale normalmente com a vítima pra gerar confiança<br>
+       Se ela recusar passar primeiro passe a sua<br>
+       Lembre-se de ver se deixou tudo ativado para não perder a conta</p>
+
+    <h2><strong>:nspin: 2° PASSO</strong></h2>
+    <p>Depois que você ou ele tiver passado a conta<br>
+       De maneira nenhuma bloqueie a vítima<br>
+       Espere ele passar a dele ou você termine de<br>
+       passar a sua, depois que já tiverem feito o trade<br>
+       Mude a conta as informações que você pegou pelo trade</p>
+
+    <h2><strong>:nspin: 3° PASSO</strong></h2>
+    <p>Se a conta da vítima for -13 não faça trade com<br>
+       Ela, porque ela consegue recuperar<br>
+       Se a conta for +13 vá na idade e mude para<br>
+       2014 feito isso o email vai sair e a vítima não<br>
+       Vai ser notificada que o email saiu</p>
+
+    <h2><strong>:nspin: 4° PASSO</strong></h2>
+    <p>Verifique se mudou tudo senha,email,códigos<br>
+       de recuperação literalmente tudo Após checar, apague mensagens<br>
+       comprometedoras de você e bloqueie a Vítima</p>
+
+    <h2><strong>:nspin: 5° AVISO</strong></h2>
+    <p>Jamais use isso pra roubar dinheiro<br>
+       Isso é um conselho meu a vítima pode muito<br>
+       Bem conseguir se vingar ou até mesmo<br>
+       Matar você</p>
+
+    <h2><strong>:nspin: 6° PASSO</strong></h2>
+    <p>Para recuperar sua conta cheque o seu Gmail<br>
+       E procure esses emails e clique no link<br>
+       Que foi circulado na print<br>
+       espere 45 minutos ate recuperar se tiver trocado o email<br>
+       da conta roubada pelo email e não pela idade, se não a vitima recupera</p>
+
+    <!-- # Aqui você pode colar as 3 imagens -->
+    <img class="step-images" src="imagens/capture_250409_135324.png" alt="Imagem 1">
+    <img class="step-images" src="imagens/capture_250409_135338.png" alt="Imagem 2">
+    <img class="step-images" src="imagens/capture_250409_135347.png" alt="Imagem 3">
+
+     <h1>:diamond: Metódo Roubar por trade de conta V2</h1>
+    
+    <h2><strong>:sirene: IMPORTANTE</strong></h2>
+    <p>A Conta que você! for passar por trade precisa ser -13 de idade<br>
+       caso contrário não vai conseguir recuperar<br>
+       Tenha um email verificado, e com verificação de 2 fatores ativo<br>
+       Se possível coloque códigos de recuperação</p>
+
+    <h2><strong>:nspin: Primeiro passo e último</strong></h2>
+    <p>praticamente igual o primeiro a diferença que quando você fizer<br>
+       login na conta da vitima vai ser pelo seu link fake não é pra mandar<br>
+       pra ela link fake e sim logar a conta dela no link fake<br>
+
+       assim você vai pegar tudo dela e os cookies também<br>
+       além disso quando ver que chegou o bot mandou a conta<br>
+
+       mantenha contato com a vitima ate conseguir alterar todas as<br>
+       informações da conta</p>
+
+    <p class="footer-note">:sirene:Este site não é afiliado ao Discord.<br>
+       Todos os direitos pertencem aos seus respectivos donos<br>
+      Não me responsabilizo se o bot não tiver enviado a conta ou<br>
+      o cookies não funcionar mais, caso isso aconteça foi porque<br>
+      você fez algo errado.</p>
+
+    <br>
+    <button class="back-button" onclick="voltar()">← Voltar</button>
+  </div>
+    <script>
+    function voltar() {
+      window.history.back();
+    }
+    const emojiMap = {
+    ":sirene:": "https://imgur.com/E4o4enf.gif",
+    ":!:": "https://imgur.com/4iIciIk.gif",
+    ":nspin:": "https://imgur.com/TMBdmzg.gif",
+    ":diamond:": "https://imgur.com/qe1gwCq.gif",
+    ":gun:": "https://imgur.com/RN5P3Pa.gif"
+    // adiciona mais aqui!
+  };
+
+  function substituirEmojis(texto) {
+    for (const emoji in emojiMap) {
+      const imgTag = `<img src="${emojiMap[emoji]}" class="emoji-gif" alt="${emoji}">`;
+      texto = texto.replaceAll(emoji, imgTag);
+    }
+    return texto;
+  }
+
+  // Substitui os emojis nos <p> e <h2>, <h1>, etc
+  document.querySelectorAll("p, h1, h2, h3, span").forEach(el => {
+    el.innerHTML = substituirEmojis(el.innerHTML);
+  });
+  </script>
+</body>
+</html>
