@@ -92,20 +92,22 @@ h2 .emoji-gif {
   border: 1px solid white;
 }
 
-.link-button {
-  display: block;
-  width: 80%;
-  padding: 15px;
-  margin: 10px auto;
-  background-color: #1e1e1e;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 16px;
-  transition: all 0.2s ease;
-  transform: scale(1);
-}
+ .link-button {
+      display: block;
+      margin: 0.5rem auto;
+      padding: 0.7rem 1.2rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 8px;
+      width: 200px;
+      transition: 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: #555;
+    }
 
 .back-button {
   margin-top: 20px;
