@@ -63,11 +63,6 @@ h2 .emoji-gif {
     border-radius: 12px;
   }
 }
-
-@media (max-width: 600px) {
-  .step-images {
-    padding: 10px;
-  }
   
 @media (max-width: 600px) {
   body {
