@@ -100,7 +100,7 @@ h2 .emoji-gif {
 
 @media (max-width: 600px) {
   .step-images2 {
-    width: 90%;
+    width: 100%;
     max-width: none;
   }
 }
